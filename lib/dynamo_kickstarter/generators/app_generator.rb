@@ -26,12 +26,25 @@ module DynamoKickstarter
         :force => true
     end
 
+    def add_gems
+      gem 'foreman', :group => :development
+      gem 'thin'
+      bundle_command :install
+    end
+
     def configure_heroku
       template 'heroku.yml.erb', 'config/heroku.yml'
     end
 
     def add_foreman
       copy_file 'Procfile'
+    end
+
+    private
+
+    def bundle_command(command)
+      say_status :run, "bundle #{command}"
+      print `"#{Gem.ruby}" -rubygems "#{Gem.bin_path('bundler', 'bundle')}" #{command}`
     end
   end
 end
