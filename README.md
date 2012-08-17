@@ -22,6 +22,9 @@ deployment preferences (Heroku). In summary it:
   * The same installer that a developer uses to setup an existing application
     is run to ensure it will work for them
 
+This generator can be used with an greenfield application or a new instance of
+a platform such as Spree or Refinery.
+
 ## Installation
 
 Add this line to your application's Gemfile:
