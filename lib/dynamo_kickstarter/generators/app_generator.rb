@@ -29,5 +29,9 @@ module DynamoKickstarter
     def configure_heroku
       template 'heroku.yml.erb', 'config/heroku.yml'
     end
+
+    def add_foreman
+      copy_file 'Procfile'
+    end
   end
 end
