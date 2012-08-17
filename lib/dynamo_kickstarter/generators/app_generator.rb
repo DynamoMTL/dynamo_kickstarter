@@ -20,5 +20,10 @@ module DynamoKickstarter
     def setup_staging_environment
       run 'cp config/environments/production.rb config/environments/staging.rb'
     end
+
+    def use_postgres_config_template
+      template 'postgresql_database.yml.erb', 'config/database.yml.example',
+        :force => true
+    end
   end
 end
