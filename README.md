@@ -1,6 +1,26 @@
-# DynamoKickstarter
+# Dynamo Kickstarter
 
-TODO: Write a gem description
+Configures a Ruby on Rails environment based on Dynamo's development and
+deployment preferences (Heroku). In summary it:
+
+1. Optimize for use with Heroku
+
+  * Use S3 for asset storage
+  * Store senstive information in environment variables, never in source code
+  * Replicate key components of the production environment
+  * Including PostegreSQL, Thin, Foreman
+
+2. Setup standard production and staging enviroments
+
+  * Setup Heroku with required add-ons such as pg:backups
+  * Setup buckets on S3
+
+3. Setup deployment configuration (using Heroku San)
+
+2. Uses the installer to complete the local setup of the application
+
+  * The same installer that a developer uses to setup an existing application
+    is run to ensure it will work for them
 
 ## Installation
 
@@ -12,13 +32,12 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install dynamo_kickstarter
-
 ## Usage
 
-TODO: Write usage instructions here
+To setup your application run:
+
+    rails generate dynamo_kickstarter:app start
+    rake dynamo:install
 
 ## Contributing
 
