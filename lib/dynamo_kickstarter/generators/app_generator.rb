@@ -40,6 +40,10 @@ module DynamoKickstarter
       copy_file 'Procfile'
     end
 
+    def add_env
+      copy_file 'env.erb', '.env'
+    end
+
     private
 
     def bundle_command(command)
