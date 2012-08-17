@@ -25,5 +25,9 @@ module DynamoKickstarter
       template 'postgresql_database.yml.erb', 'config/database.yml.example',
         :force => true
     end
+
+    def configure_heroku
+      template 'heroku.yml.erb', 'config/heroku.yml'
+    end
   end
 end

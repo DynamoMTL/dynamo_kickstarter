@@ -1,0 +1,23 @@
+production:
+  app: <%= application_name %>-production
+  stack: cedar
+  config: &default
+    BUNDLE_WITHOUT: "development:test"
+  addons:
+    - pgbackups:auto-month
+    - logging:basic
+    - logging:expanded
+    - newrelic:standard
+    - sendgrid:basic
+
+staging:
+  stack: cedar
+  app: <%= application_name %>-staging
+  config:
+    BUNDLE_WITHOUT: "development:test"
+  addons:
+    - pgbackups:auto-month
+    - logging:basic
+    - logging:expanded
+    - newrelic:standard
+    - sendgrid:basic
