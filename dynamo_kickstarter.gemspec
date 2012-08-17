@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "dynamo_kickstarter"
   gem.require_paths = ["lib"]
   gem.version       = DynamoKickstarter::VERSION
+
+  gem.add_dependency 'rails', '3.2.8'
 end
