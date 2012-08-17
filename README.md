@@ -29,7 +29,7 @@ a platform such as Spree or Refinery.
 
 Add this line to your application's Gemfile:
 
-    gem 'dynamo_kickstarter'
+    gem 'dynamo_kickstarter', git: 'git://github.com/DynamoMTL/dynamo_kickstarter.git'
 
 And then execute:
 
