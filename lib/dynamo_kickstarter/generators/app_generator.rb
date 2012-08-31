@@ -26,7 +26,12 @@ module DynamoKickstarter
         :force => true
     end
 
+    def add_brew_file
+      template 'Brewfile.erb', 'Brewfile'
+    end
+
     def add_gems
+      gem 'brewdler', :group => :development
       gem 'foreman', :group => :development
       gem 'heroku_san', :group => :development
       gem 'thin'
