@@ -33,6 +33,11 @@ module DynamoKickstarter
     def configure_foreman
       template 'forem.erb', '.foreman'
     end
+
+    def add_rvmrc
+      template 'rvmrc.erb', '.rvmrc'
+    end
+
     def add_gems
       gem 'brewdler', :group => :development
       gem 'foreman', :group => :development

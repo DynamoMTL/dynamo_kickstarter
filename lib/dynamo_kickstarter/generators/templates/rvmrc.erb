@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ -e '.rvmrc.local' ]; then
+  source .rvmrc.local;
+elif [ -e '.rvmrc_custom' ] ; then
+  source .rvmrc_custom;
+else
+  rvm --create use ruby-1.9.3@<%= application_name %>
+fi
