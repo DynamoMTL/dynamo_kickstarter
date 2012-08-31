@@ -28,6 +28,7 @@ module DynamoKickstarter
 
     def add_gems
       gem 'foreman', :group => :development
+      gem 'heroku_san', :group => :development
       gem 'thin'
       bundle_command :install
     end
