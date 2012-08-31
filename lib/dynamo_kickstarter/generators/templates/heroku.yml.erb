@@ -5,10 +5,8 @@ production:
     BUNDLE_WITHOUT: "development:test"
   addons:
     - pgbackups:auto-month
-    - logging:basic
-    - logging:expanded
     - newrelic:standard
-    - sendgrid:basic
+    - sendgrid:starter
 
 staging:
   stack: cedar
@@ -17,7 +15,4 @@ staging:
     BUNDLE_WITHOUT: "development:test"
   addons:
     - pgbackups:auto-month
-    - logging:basic
-    - logging:expanded
-    - newrelic:standard
-    - sendgrid:basic
+    - sendgrid:starter
