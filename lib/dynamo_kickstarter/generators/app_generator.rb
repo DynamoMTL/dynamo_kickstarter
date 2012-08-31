@@ -58,6 +58,10 @@ module DynamoKickstarter
       copy_file 'env.erb', '.env'
     end
 
+    def add_install_script
+      template 'install.erb', 'script/install'
+      run 'chmod +x script/install'
+    end
     private
 
     def bundle_command(command)
