@@ -30,6 +30,9 @@ module DynamoKickstarter
       template 'Brewfile.erb', 'Brewfile'
     end
 
+    def configure_foreman
+      template 'forem.erb', '.foreman'
+    end
     def add_gems
       gem 'brewdler', :group => :development
       gem 'foreman', :group => :development
