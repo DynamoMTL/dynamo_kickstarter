@@ -40,7 +40,6 @@ And then execute:
 To configure the application run:
 
     rails generate dynamo_kickstarter:app start
-    rake dynamo:install
 
 ## Contributing
 
