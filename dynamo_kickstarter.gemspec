@@ -16,4 +16,5 @@ Gem::Specification.new do |gem|
   gem.version       = DynamoKickstarter::VERSION
 
   gem.add_dependency 'rails', '3.2.8'
+  gem.add_dependency 'heroku', '~>2.30.0'
 end
