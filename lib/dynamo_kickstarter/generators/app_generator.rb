@@ -31,7 +31,7 @@ module DynamoKickstarter
     end
 
     def configure_foreman
-      template 'forem.erb', '.foreman'
+      template 'foreman.erb', '.foreman'
     end
 
     def add_rvmrc
