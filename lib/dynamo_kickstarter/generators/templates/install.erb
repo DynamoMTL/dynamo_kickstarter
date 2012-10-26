@@ -133,7 +133,7 @@ check_environment() {
 
 check_binaries() {
   for exe in $D_BINARIES; do
-    info "Checking jor $exe... ";
+    info "Checking for $exe... ";
     which "$exe"
     if [ $? -ne 0 ]; then
       error "you are missing $exe";
