@@ -58,11 +58,6 @@ module DynamoKickstarter
       copy_file 'env.erb', '.env'
     end
 
-    def add_install_script
-      template 'install.erb', 'script/install'
-      run 'chmod +x script/install'
-    end
-
     def commit
       git :add => '-A'
       git :commit => '-m "Configured application automatically with Dynamo Kickstarter"'
@@ -89,11 +84,6 @@ Next steps:
 4. Deploy your application to Heroku:
 
    rake staging production heroku:deploy
-
-4. Run the install script to complete the process. This also ensures the install
-   script will work for other developers:
-
-   cd .. & script/install
 ===============================================================================
 
       MSG

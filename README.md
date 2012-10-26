@@ -14,9 +14,6 @@ development and deployment preferences. In summary it:
     * Configures Heroku with required add-ons such as pg:backups
     * Creates buckets on S3
 3. Sets-up deployment configuration (using Heroku San)
-4. Uses the installer to complete the local setup of the application
-    * The same installer that a developer uses to setup an existing application
-      is run to ensure it will work for others in the future
 
 This generator can be used with an greenfield application or a new instance of
 a platform such as Spree or Refinery.
@@ -52,3 +49,7 @@ To configure the application run:
 ## References
 
 * http://rdoc.info/github/wycats/thor/master/Thor/Actions.html
+
+## TODO
+
+Add automated installer
