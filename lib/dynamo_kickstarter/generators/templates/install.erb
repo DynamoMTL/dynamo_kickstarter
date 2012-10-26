@@ -198,8 +198,6 @@ load_rvmrc() {
     return
   fi
 
-  cd "$D_APP_NAME"
-
   # trust rvmrc
   rvm rvmrc is_trusted
   if [ $? -ne 0 ] ; then
